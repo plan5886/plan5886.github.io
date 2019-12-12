@@ -1,3 +1,5 @@
+remote_theme : TaylanTatli/Moon
+
 # Site
 title:              Moon
 bio:                'Minimal, one column jekyll theme.'
