@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[book] 잡답이 능력이다"
+title: "[book] 잡답이 능력이다 (2019-12-13)"
 date: 2019-12-13
 excerpt: "A ton of text to test readability."
 tags: [sample post, readability, test]
@@ -14,7 +14,7 @@ comments: true
 *저자: 사이토 다카시 <br>
 *옮긴이: 장은주
 
-## 2019-12-13 하루 3개씩 익혀가는 책의 핵심!
+## (2019-12-13) 하루 3개씩 익혀가는 책의 핵심!
 
 * 잡담에 결론은 없어야 하지만, 좋은 잡담이 되기 위해서는 매듭이 있어야한다.(p.34)
 * 잡담할 때에는 화제지배율을 고려하자. (p.59)
