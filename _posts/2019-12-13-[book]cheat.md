@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "[book] 잡답이 능력이다 (2019-12-13)"
+title: "[book] 잡담이 능력이다 (2019-12-13)"
 date: 2019-12-13
 excerpt: "30초만에 어색함이 사라지는 잡담이 능력이다. (2019-12-13) 하루 3개씩 익혀가는 책의 핵심!"
-tags: [sample post, readability, test]
+tags: [book, readability, 잡담이 능력이다]
 comments: true
 ---
 
