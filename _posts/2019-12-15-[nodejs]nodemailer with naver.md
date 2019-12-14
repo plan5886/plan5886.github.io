@@ -10,7 +10,7 @@ comments: true
 # nodejs 로 회원가입 인증메일 시스템 만들기(1)
 
 ### 읽기전에...
-이 글은 nodejs express의 기본 지식을 어느정도 갖추신 분들을 위한 글입니다. nodejs가 처음이시라면,<br>
+이 글은 nodejs express의 기본 지식을 어느정도 갖추신 분들을 위한 글입니다.<br> nodejs가 처음이시라면,
 [egoing님의 nodejs강의](https://opentutorials.org/course/3332/21028)
 혹은 [w3schools의 nodejs강의](https://www.w3schools.com/nodejs/default.asp) 를 추천드립니다.<br>
 (vuejs와 함께 사용하시는 분들은 [이 강의](https://medium.com/hivelab-dev/vue-express-mysql-part1-98f68408d444)도 추천드립니다.)
