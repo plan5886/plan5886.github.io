@@ -3,7 +3,7 @@ layout: post
 title:  "[nodejs] nodejs로 회원가입 메일인증 시스템 만들기(1)"
 date:   2019-12-15
 excerpt: "nodejs를 이용하여 회원가입 시, 인증 메일을 보내는 시스템을 구현해 보겠습니다~"
-tag: [nodejs, nodemailer, smtp, nodemailer-smtp-transport, nodejs naver, nodejs smtp ]
+tag: [nodejs, nodemailer, smtp, nodemailer-smtp-transport, nodejs naver, nodejs smtp, nodejs 네이버, nodemailer 네이버 ]
 comments: true
 ---
 
