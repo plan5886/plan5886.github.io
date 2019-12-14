@@ -28,7 +28,7 @@ https://miryang.dev/2019/04/25/nodejs-page-3/ (mac 환경에서 nodejs와 mongoD
 
 ### Frontend의 상태
 
-폼 이미지
+![alt text](https://plan5886.github.io/assets/img/2019-12-15/img_form.png "회원가입 폼")
 
 [vuejs] frontend codes
 {% highlight javascript %}
