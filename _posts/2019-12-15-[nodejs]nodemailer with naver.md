@@ -20,7 +20,7 @@ https://nodemailer.com/about/ (nodemailer 공식사이트) <br>
 https://miryang.dev/2019/04/25/nodejs-page-3/ (mac 환경에서 nodejs와 mongoDB를 이용하여 시스템 구축)
 => 저는 mongoDB가 아닌 windows10 환경에서 mysql과 vuejs를 함께 이용해서 구축하였습니다.
 
-
+<br><br>
 ## Frontend의 상태
 <hr>
 
@@ -42,7 +42,7 @@ this.$http.post('/api/SignUp', { // 회원가입 버튼 클릭시 호출
 ```
 
 제 프론트엔드의 상태가 궁금하신 분들을 위해 준비해보았어요~
-
+<br><br><br>
 ## Backend 구현
 <hr>
 모든 기능을 구현하기에 앞서, 메일을 간단하게 보내보겠습니다.
@@ -96,7 +96,7 @@ router.post('/', function(req, res, next) {
   handle_email.EmailVerification('some Email')
 });
 ```
-
+<br><br>
 짜잔~ 이메일이 잘 보내졌나요?
 
 아직 잘 보내지지 않을거 같은데요 ㅎㅎ
