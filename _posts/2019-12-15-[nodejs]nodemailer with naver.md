@@ -51,9 +51,11 @@ this.$http.post('/api/SignUp', { // 회원가입 버튼 클릭시 호출
 * npm install nodemailer
 * npm install nodemailer-smtp-transport
 
-**디렉토리 트리** <br>
+**디렉토리 트리**
+<div style="margin-bottom: 20px">
 <img align="left" src="https://plan5886.github.io/assets/img/2019-12-15/img_folder.png">
-<br>
+</div>
+
 
 
 **[nodejs] handle_email.js**
