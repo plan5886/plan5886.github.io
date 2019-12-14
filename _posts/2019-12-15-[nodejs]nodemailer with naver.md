@@ -77,7 +77,7 @@ module.exports =  {
     EmailVerification (email) {
 
         var mailOption = {
-            from: 'userid@naver.com', // 보내는 분의 메일계정
+            from: '"name"<userid@naver.com>', // 보내는 분의 메일계정
             to: email,                // 받는 분의 메일계정 (여러 개 가능)
             subject: "Hello",         
             text: "Hello world?",
