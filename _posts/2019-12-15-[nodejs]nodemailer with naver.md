@@ -74,7 +74,7 @@ module.exports =  {
             html: "<b>Hello world?</b>" 
         }
 
-        smtpTransport.sendMail(mailOption, (err, res) => {
+        smtpTransport.sendMail(mailOption, (err, res) => { // 메일을 보내는 코드
             if(err){
                 console.log(err)
                 throw err
@@ -99,11 +99,11 @@ router.post('/', function(req, res, next) {
 
 아직 잘 보내지지 않을거 같은데요 ㅎㅎ
 
-그 이유는 계정 보안의 문제로, 해당 사이트에서 외부 앱으로부터의 접근을 제한하고 있기 때문이에요~
+그 이유는 계정 보안의 문제로, 해당 사이트에서 외부 앱으로부터의 **접근**을 제한하고 있기 때문이에요~
 
-구글의 gmail의 경우, myaccount.google.com/lesssecureapps로 접속하셔서 사용안함 -> 사용 으로 꼭!! 바꾸어주셔야 합니다
+구글의 gmail의 경우, [구글계정설정](myaccount.google.com/lesssecureapps) 로 접속하셔서 사용안함 -> 사용 으로 꼭!! 바꾸어주셔야 합니다
 
-네이버의 경우, https://mail.naver.com/option/imap로 접속하셔서 [IMAP/SMTP 사용]에서 사용으로 체크해주시면 됩니다~
+네이버의 경우, [네이버 계정 smtp설정](https://mail.naver.com/option/imap) 로 접속하셔서 **IMAP/SMTP 사용**에서 사용으로 체크해주시면 됩니다~
 
 계정 설정 후, 다시 실행해보시면, 'mail sent!'라는 기분좋은 문구를 콘솔창에서 보실 수 있어요~
 받는 메일 계정에도 꼭 들어가서 확인해보세요 ㅎㅎ
