@@ -7,15 +7,15 @@ tag: [nodejs, nodemailer, smtp, nodemailer-smtp-transport, nodejs naver ]
 comments: true
 ---
 
-#nodejs 로 회원가입 인증메일 시스템 만들기(1)
+# nodejs 로 회원가입 인증메일 시스템 만들기(1)
 
-###읽기전에...
+### 읽기전에...
 이 글은 nodejs express의 기본 지식을 어느정도 갖추신 분들을 위한 글입니다. nodejs가 처음이시라면,<br>
 egoing님의 nodejs강좌: https://opentutorials.org/course/3332/21028<br>
 혹은 w3schools의 nodejs강좌: https://www.w3schools.com/nodejs/default.asp 를 추천드립니다.<br>
 (vuejs와 함께 사용하시는 분들은 https://medium.com/hivelab-dev/vue-express-mysql-part1-98f68408d444 강좌도 추천드립니다.)
 
-###참고사이트
+### 참고사이트
 https://nodemailer.com/about/ (nodemailer 공식사이트) <br>
 https://miryang.dev/2019/04/25/nodejs-page-3/ (mac 환경에서 nodejs와 mongoDB를 이용하여 시스템 구축)
 => 저는 mongoDB가 아닌 windows10 환경에서 mysql과 vuejs를 함께 이용해서 구축하였습니다.
@@ -42,7 +42,7 @@ this.$http.post('/api/SignUp', { // 회원가입 버튼 클릭시 호출
 
 제 프론트엔드의 상태가 궁금하신 분들을 위해 준비해보았어요~
 
-##Backend 구현
+## Backend 구현
 모든 기능을 구현하기에 앞서, 메일을 간단하게 보내보겠습니다.
 먼저, 이메일을 보내줄 모듈(handle_email)을 구현해 보겠습니다.
 
