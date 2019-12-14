@@ -49,7 +49,7 @@ this.$http.post('/api/SignUp', { // 회원가입 버튼 클릭시 호출
 먼저, 이메일을 보내줄 모듈(handle_email)을 구현해 보겠습니다.
 
 * npm install nodemailer
-* npm install nodemailer-smtp-transport
+* npm install nodemailer-smtp-transportrr
 
 **디렉토리 트리**
 <br>
