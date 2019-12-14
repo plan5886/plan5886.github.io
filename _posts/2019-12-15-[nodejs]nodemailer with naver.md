@@ -26,7 +26,7 @@ https://miryang.dev/2019/04/25/nodejs-page-3/ (mac 환경에서 nodejs와 mongoD
 
 ![alt text](https://plan5886.github.io/assets/img/2019-12-15/img_form.png "회원가입 폼")
 
-[vuejs] frontend codes
+**[vuejs] frontend codes**
 ```javascript
 // some codes
 
@@ -51,7 +51,7 @@ this.$http.post('/api/SignUp', { // 회원가입 버튼 클릭시 호출
 * npm install nodemailer
 * npm install nodemailer-smtp-transport
 
-[nodejs] handle_email.js
+**[nodejs] handle_email.js**
 ```javascript
 var nodemailer = require('nodemailer')
 var smtpTransporter = require('nodemailer-smtp-transport')
@@ -89,7 +89,7 @@ module.exports =  {
 
 모듈 구현을 마쳤으니, 간단하게 호출로 이메일을 보내봅시다~
 
-[nodejs] SignUp.js
+**[nodejs] SignUp.js**
 ```javascript
 var handle_email = require('../my_module/handle_email');
 router.post('/', function(req, res, next) {                   
