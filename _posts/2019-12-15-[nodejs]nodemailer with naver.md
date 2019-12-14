@@ -53,7 +53,9 @@ this.$http.post('/api/SignUp', { // 회원가입 버튼 클릭시 호출
 
 **디렉토리 트리**
 <br>
-<img src="https://plan5886.github.io/assets/img/2019-12-15/img_folder.png" style="display:block">
+<div style="overflow: hidden">
+<img src="https://plan5886.github.io/assets/img/2019-12-15/img_folder.png" style="display:block; float:left">
+</div>
 
 
 
