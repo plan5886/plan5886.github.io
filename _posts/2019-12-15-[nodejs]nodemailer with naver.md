@@ -11,9 +11,9 @@ comments: true
 
 ### 읽기전에...
 이 글은 nodejs express의 기본 지식을 어느정도 갖추신 분들을 위한 글입니다. nodejs가 처음이시라면,<br>
-egoing님의 nodejs강좌: https://opentutorials.org/course/3332/21028<br>
-혹은 w3schools의 nodejs강좌: https://www.w3schools.com/nodejs/default.asp 를 추천드립니다.<br>
-(vuejs와 함께 사용하시는 분들은 https://medium.com/hivelab-dev/vue-express-mysql-part1-98f68408d444 강좌도 추천드립니다.)
+[egoing님의 nodejs강의](https://opentutorials.org/course/3332/21028)
+혹은 [w3schools의 nodejs강의](https://www.w3schools.com/nodejs/default.asp) 를 추천드립니다.<br>
+(vuejs와 함께 사용하시는 분들은 [이 강의](https://medium.com/hivelab-dev/vue-express-mysql-part1-98f68408d444)도 추천드립니다.)
 
 ### 참고사이트
 https://nodemailer.com/about/ (nodemailer 공식사이트) <br>
