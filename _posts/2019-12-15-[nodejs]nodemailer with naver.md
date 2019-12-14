@@ -22,6 +22,7 @@ https://miryang.dev/2019/04/25/nodejs-page-3/ (mac 환경에서 nodejs와 mongoD
 
 
 ## Frontend의 상태
+<hr>
 
 ![alt text](https://plan5886.github.io/assets/img/2019-12-15/img_form.png "회원가입 폼")
 
@@ -43,6 +44,7 @@ this.$http.post('/api/SignUp', { // 회원가입 버튼 클릭시 호출
 제 프론트엔드의 상태가 궁금하신 분들을 위해 준비해보았어요~
 
 ## Backend 구현
+<hr>
 모든 기능을 구현하기에 앞서, 메일을 간단하게 보내보겠습니다.
 먼저, 이메일을 보내줄 모듈(handle_email)을 구현해 보겠습니다.
 
