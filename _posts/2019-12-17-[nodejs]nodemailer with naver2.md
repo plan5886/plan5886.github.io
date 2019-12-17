@@ -163,26 +163,26 @@ this.$http.post('/api/SignUp/verify', {  //   /api/SignUp/verify에 요청함!
 router.post('/verify', function(req, res, next) {
     //userid로 해당 인증코드를 찾는다(sql)
     var sql = "select key_for_verify from users where userid = " + mysql.escape(req.body.userid)
-        consql.query(sql, (err, result) => {
-            if(err){
-                console.error(err)
-                throw err
-            }
-            // 서버 DB에 저장된 인증코드와 frontend에서 보내온 코드가 일치하는지 확인!
-            if(result[0].key_for_verify == req.body.key_for_verify) {
-                //해당 유저에게 로그인 권한을 준다(sql2)
-                var sql2 = "update users set permission = 2 where userid = " + mysql.escape(req.body.userid)
-                consql.query(sql2, (err, result) => {
-                    if(err){
-                        console.error(err)
-                        throw err
-                    }
-                    console.log('user verified')
-                    res.end()
-                })
-            }
-        })
+    consql.query(sql, (err, result) => {
+        if(err){
+            console.error(err)
+            throw err
+        }
+        // 서버 DB에 저장된 인증코드와 frontend에서 보내온 코드가 일치하는지 확인!
+        if(result[0].key_for_verify == req.body.key_for_verify) {
+            //해당 유저에게 로그인 권한을 준다(sql2)
+            var sql2 = "update users set permission = 2 where userid = " + mysql.escape(req.body.userid)
+            consql.query(sql2, (err, result) => {
+                if(err){
+                    console.error(err)
+                    throw err
+                }
+                console.log('user verified')
+                res.end()
+            })
+        }
     })
+})
 ```
 
 그다지 많은 내용은 아니었지만, 코드 때문에 포스팅 길이가 많이 길어졌네요 ㅎㅎ
