@@ -3,7 +3,7 @@ remote_theme : TaylanTatli/Moon
 # Site
 title:              "plan"
 bio:                "plan's everyday life"
-description:        "Moon is a minimal, one column jekyll theme for your blog."
+description:        "코딩하면서 배운 것들, 정리 및 한글자료 만들기"
 reading_time:       true
 words_per_minute:   200
 logo:               'assets/img/logo.png'
