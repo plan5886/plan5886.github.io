@@ -7,7 +7,7 @@ tag: [nodejs, nodemailer, smtp, nodemailer-smtp-transport, nodejs naver, nodejs 
 comments: true
 ---
 
-# nodejs 로 회원가입 인증메일 시스템 만들기(1)
+# nodejs 로 회원가입 메일인증 시스템 만들기(1)
 
 ### 읽기전에...
 이 글은 nodejs express의 기본 지식을 어느정도 갖추신 분들을 위한 글입니다.<br> nodejs가 처음이시라면,
