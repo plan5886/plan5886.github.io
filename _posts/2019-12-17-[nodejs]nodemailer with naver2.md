@@ -28,6 +28,10 @@ https://miryang.dev/2019/04/25/nodejs-page-3/ (mac 환경에서 nodejs와 mongoD
 이번 시간에는 **인증**에 관한 이야기를 해보겠습니다!! 그럼, 인증은 어떤 방식으로 이루어져야 할까요?
 다른 여러 사이트에서 이메일을 통한 인증으로 가입을 해보신 경험 다들 있으실텐데요. frontend의 경우, 아시다시피 그다지 복잡하지 않은 형태로 구현가능합니다.
 제 경우에는 
+<br> 
  ![alt text](https://plan5886.github.io/assets/img/2019-12-17/img_frontend_verify_input.png "인증 상자")
+<br>
+ 위의 그림과 같이 간단하게 구현했습니다.
+ 
 
 
