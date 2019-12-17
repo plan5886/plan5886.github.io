@@ -121,7 +121,7 @@ router.post('/', function(req, res, next) {
 
 메일 보내는 건 기분좋게 마무리하게 되었네요 ㅎ
 
-다음 포스팅에서는 인증에 관해서 다루어보도록 하겠습니다
+[다음 포스팅](https://plan5886.github.io//nodejs-nodemailer-with-naver2/)에서는 인증에 관해서 다루어보도록 하겠습니다
 
 쾌딩(유쾌한 코딩)하십셔 ^^7!!
 
