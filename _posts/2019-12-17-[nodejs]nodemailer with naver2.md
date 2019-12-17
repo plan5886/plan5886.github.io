@@ -43,6 +43,61 @@ https://miryang.dev/2019/04/25/nodejs-page-3/ (mac 환경에서 nodejs와 mongoD
 
 
 #### 유저에게 메일로 인증코드 보내기
- 
+먼저 보낼 인증코드를 만들어 보겠습니다.
 
+**[nodejs]SignUp.js**
+
+```javascript
+
+var crypto = require('crypto'); //내장 모듈이라 따로 설치 안해주셔도 됩니다!!
+var key_one=crypto.randomBytes(256).toString('hex').substr(100, 5);
+var key_two=crypto.randomBytes(256).toString('base64').substr(50, 5);
+var key_for_verify=key_one+key_two; //우리가 사용할 인증코드
+
+var handle_email = require('../my_module/handle_email');
+router.post('/', function(req, res, next) {                   
+  handle_email.EmailVerification('some Email', key_for_verify) // 이전코드에서 수정된부분! 인증코드를 함께 넘김
+});
+```
+ 짜잔~ 이렇게하면 저희가 사용할 인증코드 완성! 저도 자세한 코드는 잘 모르는데요... Ctrl+C,V라는 최고의 기술을 통해 만들어 냈습니다 ㅎㅎ
+ 랜덤으로 5자리씩 2가지의 키를 만들어 합쳐 10자리 1개의 키를 만들고 있습니다.
+ 코드의 자세한 내용을 알고싶으신 분들은 [이 링크](https://miryang.dev/2019/04/25/nodejs-page-3/)를 통해 공부하시면 되요!
+ 
+ 이제 메일과 함께 보내볼 텐데요, 이전 시간에 작성하신 코드를 쪼오끔 수정하시면 금방 보낼 수 있습니다~
+ 
+ **[nodejs]handle_mail.js**
+ ```javascript
+var nodemailer = require('nodemailer')
+var smtpTransporter = require('nodemailer-smtp-transport')
+
+var smtpTransport = nodemailer.createTransport(smtpTransporter({
+    service: 'Naver',
+    host:'smtp.naver.com',
+    auth: {
+        user: 'userid@naver.com',    
+        pass: 'password'
+    }
+}));
+
+module.exports =  {
+    EmailVerification (email, key) { // key 추가
+
+        var mailOption = {
+            from: '"name"<userid@naver.com>', 
+            to: email,               
+            subject: "Hello",         
+            // text: "Hello world?",
+            html: "<b>verification code: </b>" + key // key 추가
+        }
+
+        smtpTransport.sendMail(mailOption, (err, res) => {
+            if(err){
+                console.log(err)
+                throw err
+            }
+            console.log("mail sent!")
+        });
+    }
+}
+```
 
