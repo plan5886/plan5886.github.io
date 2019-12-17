@@ -42,7 +42,7 @@ https://miryang.dev/2019/04/25/nodejs-page-3/ (mac 환경에서 nodejs와 mongoD
 <hr>
 
 
-#### 유저에게 메일로 인증코드 보내기
+### 유저에게 메일로 인증코드 보내기
 먼저 보낼 인증코드를 만들어 보겠습니다.
 
 **[nodejs]SignUp.js**
@@ -102,7 +102,7 @@ module.exports =  {
 }
 ```
 
-#### 보낸 인증코드 서버에 저장하기
+### 보낸 인증코드 서버에 저장하기
 서버의 mysql DB에 저장해보도록 하겠습니다!
 
 **[nodejs]SignUp.js**
@@ -141,6 +141,50 @@ router.post('/', function(req, res, next) {
 });
 ```
 
-서버에 저장까지 완료!!
+서버에 저장까지 완료!! 정상적으로 코드가 작동했다면, 콘솔창에 userinfo insert complete라는 문구를 보실 수 있어요!!
 
+### (유저가 입력한 코드) = (서버에 저장된 코드) 인지 확인!
+간단한 frontend 입력 폼을 준비해 보았습니다~
+![alt text](https://plan5886.github.io/assets/img/2019-12-17/img_front_verify_input.png "회원가입 폼")
+
+이러한 폼에 코드를 입력 후 확인 버튼을 누르면, frontend를 통해 서버에 인증 요청을 합니다.
+
+[vuejs]frontend.js
+```javascript
+this.$http.post('/api/SignUp/verify', {  // SignUp 아래 /verify에 요청함! 
+        key_for_verify: this.input_verify_code,
+        userid: this.userid
+})
+```
+
+[nodejs]SignUp.js
+```javascript
+
+//위의 SignUp.js 코드 아래에 추가하시면 됩니다
+
+router.post('/verify', function(req, res, next) {
+    //userid로 해당 인증코드를 찾는다(sql)
+    var sql = "select key_for_verify from users where userid = " + mysql.escape(req.body.userid)
+        consql.query(sql, (err, result) => {
+            if(err){
+                console.error(err)
+                throw err
+            }
+            // 서버 DB에 저장된 인증코드와 frontend에서 보내온 코드가 일치하는지 확인!
+            if(result[0].key_for_verify == req.body.key_for_verify) {
+                //해당 유저에게 로그인 권한을 준다(sql2)
+                var sql2 = "update users set permission = 2 where userid = " + mysql.escape(req.body.userid)
+                consql.query(sql2, (err, result) => {
+                    if(err){
+                        console.error(err)
+                        throw err
+                    }
+                    console.log('user verified')
+                    res.end()
+                })
+            }
+        })
+    })
+
+```
 
