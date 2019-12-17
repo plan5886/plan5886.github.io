@@ -48,11 +48,12 @@ https://miryang.dev/2019/04/25/nodejs-page-3/ (mac 환경에서 nodejs와 mongoD
 **[nodejs]SignUp.js**
 
 ```javascript
-
+//---추가된 부분--- 
 var crypto = require('crypto'); //내장 모듈이라 따로 설치 안해주셔도 됩니다!!
 var key_one=crypto.randomBytes(256).toString('hex').substr(100, 5);
 var key_two=crypto.randomBytes(256).toString('base64').substr(50, 5);
 var key_for_verify=key_one+key_two; //우리가 사용할 인증코드
+//------
 
 var handle_email = require('../my_module/handle_email');
 router.post('/', function(req, res, next) {                   
@@ -100,4 +101,46 @@ module.exports =  {
     }
 }
 ```
+
+#### 보낸 인증코드 서버에 저장하기
+서버의 mysql DB에 저장해보도록 하겠습니다!
+
+**[nodejs]SignUp.js**
+
+```javascript
+var crypto = require('crypto'); 
+var key_one=crypto.randomBytes(256).toString('hex').substr(100, 5);
+var key_two=crypto.randomBytes(256).toString('base64').substr(50, 5);
+var key_for_verify=key_one+key_two;
+
+//---추가된 부분---
+var mysql = require('mysql'); 
+var consql = mysql.createConnection({
+    host: 'localhost',
+    port: '3306',
+    user: 'root',
+    password: 'password',
+    database: 'DBname'
+});
+//------
+
+var handle_email = require('../my_module/handle_email');
+router.post('/', function(req, res, next) {
+  var userinfo = req.body                   
+  handle_email.EmailVerification('some Email', key_for_verify)
+  userinfo['key_for_verify'] = key_for_verify //userinfo에 key_for_verify 속성 추가
+  var sql = 'insert into users set ?'
+  consql.query(sql, userinfo, function (err, result) {
+      if(err){ //mysql 에러 처리
+         console.error(err)
+         throw err
+      }
+      console.log('userinfo insert complete!')
+      res.end()
+  })
+});
+```
+
+서버에 저장까지 완료!!
+
 
