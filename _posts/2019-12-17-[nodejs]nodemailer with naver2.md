@@ -147,7 +147,7 @@ router.post('/', function(req, res, next) {
 
 이러한 폼에 코드를 입력 후 확인 버튼을 누르면, frontend를 통해 서버에 인증 요청을 합니다.
 
-[vuejs]frontend.js
+**[vuejs]frontend.js**
 ```javascript
 this.$http.post('/api/SignUp/verify', {  //   /api/SignUp/verify에 요청함! 
         key_for_verify: this.input_verify_code,
@@ -155,7 +155,7 @@ this.$http.post('/api/SignUp/verify', {  //   /api/SignUp/verify에 요청함!
 })
 ```
 
-[nodejs]SignUp.js
+**[nodejs]SignUp.js**
 ```javascript
 
 //위의 SignUp.js 코드 아래에 추가하시면 됩니다
