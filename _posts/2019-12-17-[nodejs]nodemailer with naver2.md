@@ -149,7 +149,7 @@ router.post('/', function(req, res, next) {
 
 [vuejs]frontend.js
 ```javascript
-this.$http.post('/api/SignUp/verify', {  // SignUp 아래 /verify에 요청함! 
+this.$http.post('/api/SignUp/verify', {  //   /api/SignUp/verify에 요청함! 
         key_for_verify: this.input_verify_code,
         userid: this.userid
 })
