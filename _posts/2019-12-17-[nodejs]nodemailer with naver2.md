@@ -66,7 +66,7 @@ router.post('/', function(req, res, next) {
  
  이제 메일과 함께 보내볼 텐데요, 이전 시간에 작성하신 코드를 쪼오끔 수정하시면 금방 보낼 수 있습니다~
  
- **[nodejs]handle_mail.js**
+ **[nodejs]handle_email.js**
  ```javascript
 var nodemailer = require('nodemailer')
 var smtpTransporter = require('nodemailer-smtp-transport')
@@ -144,7 +144,7 @@ router.post('/', function(req, res, next) {
 서버에 저장까지 완료!! 정상적으로 코드가 작동했다면, 콘솔창에 userinfo insert complete라는 문구를 보실 수 있어요!!
 
 ### (유저가 입력한 코드) = (서버에 저장된 코드) 인지 확인!
-간단한 frontend 입력 폼을 준비해 보았습니다~
+간단한 frontend 입력 폼을 준비해 보았습니다~<br>
 ![alt text](https://plan5886.github.io/assets/img/2019-12-17/img_front_verify_input.png "회원가입 폼")
 
 이러한 폼에 코드를 입력 후 확인 버튼을 누르면, frontend를 통해 서버에 인증 요청을 합니다.
@@ -185,6 +185,10 @@ router.post('/verify', function(req, res, next) {
             }
         })
     })
-
 ```
 
+그다지 많은 내용은 아니었지만, 코드 때문에 포스팅 길이가 많이 길어졌네요 ㅎㅎ
+
+지금까지 긴 글 따라 읽어 주신분들 감사드리고, 다음부터는 다른 포스팅으로 찾아뵙도록 하겠습니다~
+
+쾌딩하십셔 ^^7 
