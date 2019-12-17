@@ -21,7 +21,13 @@ https://miryang.dev/2019/04/25/nodejs-page-3/ (mac 환경에서 nodejs와 mongoD
 => 저는 mongoDB가 아닌 windows10 환경에서 mysql과 vuejs를 함께 이용해서 구축하였습니다.
 
 <br><br>
-## Frontend의 상태
+## 인증은 어떻게?
 <hr>
+
+[이전 시간](https://plan5886.github.io//nodejs-nodemailer-with-naver/)에는 간단하게 메일을 보내는 방법을 알아보았습니다 ㅎ <br>
+이번 시간에는 **인증**에 관한 이야기를 해보겠습니다!! 그럼, 인증은 어떤 방식으로 이루어져야 할까요?
+다른 여러 사이트에서 이메일을 통한 인증으로 가입을 해보신 경험 다들 있으실텐데요. frontend의 경우, 아시다시피 그다지 복잡하지 않은 형태로 구현가능합니다.
+제 경우에는 
+ 
 
 
