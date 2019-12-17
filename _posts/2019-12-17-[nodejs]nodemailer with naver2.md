@@ -189,7 +189,7 @@ router.post('/verify', function(req, res, next) {
 
 지금까지 긴 글 따라 읽어 주신분들 감사드립니다~
 
-[nodejs] nodejs로 회원가입 메일인증 시스템 만들기 마치도록 하겠습니다 ㅎ
+**[nodejs] nodejs로 회원가입 메일인증 시스템 만들기** 마치도록 하겠습니다 ㅎ
  
 다음부터는 다른 포스팅으로 찾아뵙도록 하겠습니다~
 
